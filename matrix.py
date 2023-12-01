@@ -1,4 +1,4 @@
-import random
+from random import sample
 from typing import Self
 
 from alphabet import (
@@ -22,7 +22,7 @@ class Matrix:
     _matrix_size: int
     _is_sorted: bool
 
-    def __init__(self, matrix: list[list[str]], matrix_size: int):
+    def __init__(self, matrix: list[list[str]], matrix_size: int) -> None:
         self._matrix = matrix
         self._matrix_size = matrix_size
         self._is_sorted = False
@@ -34,7 +34,7 @@ class Matrix:
         for row in range(matrix_size):
             matrix_row = []
             for column in range(matrix_size):
-                matrix_row.append("".join(random.sample(alphabet, 5)))
+                matrix_row.append("".join(sample(alphabet, 5)))
 
             matrix.append(matrix_row)
 

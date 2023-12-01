@@ -10,17 +10,17 @@ from user_interface import (
 
 
 def choose_matrix_size() -> int:
-        try:
-            size = int(input())
-        except ValueError:
-            print(VALUE_ERROR_MSG)
-            return choose_matrix_size()
+    try:
+        size = int(input())
+    except ValueError:
+        print(VALUE_ERROR_MSG)
+        return choose_matrix_size()
 
-        if size not in range(2, 5 + 1):
-            print(SIZE_NOT_IN_INTERVAL_MSG)
-            return choose_matrix_size()
+    if size not in range(2, 5 + 1):
+        print(SIZE_NOT_IN_INTERVAL_MSG)
+        return choose_matrix_size()
 
-        return size
+    return size
 
 
 def get_filled_matrix(matrix_size: int) -> Matrix:
